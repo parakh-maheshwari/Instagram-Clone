@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "ca100e0d-0b1b-416b-b355-347e31ade08e",
+		"name": "Instagram_clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46295036",
+		"_collection_link": "https://parakh-339446.postman.co/workspace/Parakh's-Workspace~0799b4c0-a299-4ba2-8453-e0e3c1ad9b12/collection/46295036-ca100e0d-0b1b-416b-b355-347e31ade08e?action=share&source=collection_link&creator=46295036"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Me",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/bob/follow",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"bob",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"john\",\r\n  \"email\": \"john@gmail.com\",\r\n  \"password\": \"john\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Post",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"image_url\": \"https://www.vecteezy.com/free-photos\",\r\n  \"caption\": \"Hello world\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/693eabb27a19ebfaa50d8484",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"693eabb27a19ebfaa50d8484"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment on Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Nice post!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/693eabb27a19ebfaa50d8484/comment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"693eabb27a19ebfaa50d8484",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Comments",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/693eabb27a19ebfaa50d8484/comments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"693eabb27a19ebfaa50d8484",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/693eabb27a19ebfaa50d8484/like",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"693eabb27a19ebfaa50d8484",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/posts/693eabb27a19ebfaa50d8484/unlike",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"693eabb27a19ebfaa50d8484",
+						"unlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Feed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzZTlmZjQ3YjQyM2NhNjEyZmViZDNiIiwiZXhwIjoxNzY1Nzk5ODEwfQ.S5u-Ap5Eyog_q1ZW8BLDmf37rRqXljOSZHI6M28FP3U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/feed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
